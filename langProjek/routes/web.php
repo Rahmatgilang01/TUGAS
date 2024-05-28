@@ -20,3 +20,10 @@ Route::get('/',[Homecontroller::class, 'index']);
 Route::get('/register',[AuthController::class, 'register']);
 
 route::post('/welcome',[AuthController::class,'welcome']);
+
+route::get('/table', function(){
+    return view('page.table');
+});
+route::get('/data-table', function(){
+    return view('page.data-table');
+});
