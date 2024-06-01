@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Homecontroller;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Castcontroller;
+use PhpParser\Node\Expr\Cast;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +29,5 @@ route::get('/table', function(){
 route::get('/data-table', function(){
     return view('page.data-table');
 });
+
+route::resource('cast',CastController::class);
